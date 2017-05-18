@@ -8,8 +8,6 @@ abstract class Creature {
 
 	private int gold;
 	
-	private int numPotions;
-
 	private String name;
 
 	public String getName() {
@@ -28,36 +26,28 @@ abstract class Creature {
 		return health;
 	}
 
-	public int getNumPotions() {
-		return numPotions;
-	}
-
 	public int getGold() {
 		return gold;
 	}
 
-	public void setName(String nm) {
-		name = nm;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public void setAttack(int ar) {
-		attack = ar;
+	public void setAttack(int attack) {
+		this.attack = attack;
 	}
 
-	public void setDefense(int dr) {
-		defense = dr;
+	public void setDefense(int defense) {
+		this.defense = defense;
 	}
 
-	public void setHealth(int hr) {
-		health = hr;
+	public void setHealth(int health) {
+		this.health = health;
 	}
 
-	public void setNumPotions(int np) {
-		numPotions = np;
-	}
-
-	public void setGold(int gp) {
-		gold = gp;
+	public void setGold(int gold) {
+		this.gold = gold;
 	}
 
 	public void attack(Creature target) {

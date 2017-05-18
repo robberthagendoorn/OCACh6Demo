@@ -12,12 +12,12 @@ public class Item {
 		return cost;
 	}
 
-	public void setCost(int co) {
-		cost = co;
+	public void setCost(int cost) {
+		this.cost = cost;
 	}
 
-	public void setName(String nm) {
-		name = nm;
+	public void setName(String name) {
+		this.name = name;
 	}
 }
 		

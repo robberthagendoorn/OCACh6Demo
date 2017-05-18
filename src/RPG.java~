@@ -148,16 +148,16 @@ private static String getAttackOption(Monster monster) {
 		boolean keepGoing = true;
 		switch (input) {
 			case BUY_POTION:
-				hero.buyItem(new Potion());
+				buyItem(new Potion());
 				return true;
 			case BUY_DAGGER:
-				hero.buyItem(new Dagger());
+				buyItem(new Dagger());
 				return true;
 			case BUY_SWORD:
-				hero.buyItem(new Sword());
+				buyItem(new Sword());
 				return true;
 			case BUY_ARMOR:
-				hero.buyItem(new Armor());
+				buyItem(new Armor());
 				return true;
 			case LEAVE_SHOP:
 				return false;

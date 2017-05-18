@@ -63,7 +63,7 @@ public class Hero extends Creature {
 		}
 	}
 	
-	public void buyItem(Item item) {
+	public static void buyItem(Item item) {
 		if (getGold() < item.getCost()) {
 			System.out.println("\nYou do not have enough gold for this item");
 		} else {
