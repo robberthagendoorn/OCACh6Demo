@@ -1,2 +1,1 @@
 javac -d .\run\ .\src\*.java
-java -cp .\run\ RPG
