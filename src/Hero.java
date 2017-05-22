@@ -1,17 +1,12 @@
 public class Hero extends Creature {
-	{
-		setAttack(1);
-		setDefense(0);
-		setHealth(10);
-		setName("Hero");
-		setGold(0);
-	}
 
 	private Weapon weapon;
-
 	private Armor armor;
-
 	private int numPotions = 0;
+
+	public Hero() {
+		super(1, 0, 10, 0, "Hero");
+	}
 
 	public int getAttack() {
 		int base = super.getAttack();
@@ -41,36 +36,5 @@ public class Hero extends Creature {
 		if (numPotions < 0) throw new IllegalArgumentException("");
 		this.numPotions = numPotions;
 	}
-
-	public void useItem() {
-		try {
-			setNumPotions(getNumPotions() - 1);
-			setHealth(10);
-		} catch (IllegalArgumentException e) {
-			System.out.println("\nYou do not have anymore potions");
-		}
-	}
-
-	public void upgradeHero(Item item) {
-		if (item instanceof Weapon) {
-			Weapon weapon = (Weapon)item;
-			setWeapon(weapon);
-		} else if (item instanceof Armor) {
-			Armor armor = (Armor)item;
-			setArmor(armor);
-		} else {
-			setNumPotions(getNumPotions() + 1);
-		}
-	}
-	
-	public void buyItem(Item item) {
-		if (getGold() < item.getCost()) {
-			System.out.println("\nYou do not have enough gold for this item");
-		} else {
-			System.out.println("\nYou have bought a " + item.getName());		
-			setGold(getGold() - item.getCost());
-			upgradeHero(item);
-		}
-	}	
 }
 
